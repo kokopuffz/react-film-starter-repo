@@ -13,7 +13,7 @@ export default function FilmList({ films, onFaveToggle, handleDetailsClick }) {
   const handleFaveToggle = (film) => {
     console.log("FILMLIST handleFaveToggle");
     let newFaves = [...faves];
-    faves = setFaves[newFaves];
+    setFaves(newFaves);
 
     const filmIndex = faves.indexOf(film);
     filmIndex < 0
@@ -49,7 +49,7 @@ export default function FilmList({ films, onFaveToggle, handleDetailsClick }) {
           onClick={() => handleFilterClick("faves")}
         >
           FAVES
-          <span className="section-count">0</span>
+        <span className="section-count">{faves.length}</span>
         </div>
       </div>
       

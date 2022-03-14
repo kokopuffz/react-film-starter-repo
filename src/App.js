@@ -9,15 +9,18 @@ export default function App() {
   const [current, setCurrent] = useState({});
 
   const handleDetailsClick = (film) => {
+    let filmtemp = film
     console.log(`handledeetsclick from app ${film}`);
-    setCurrent(film)
+  setCurrent(film)
   };
+
+  console.log("CURRENT @ APP", current)
 
   return (
     <div className="film-library">
       <FilmList films={films} handleDetailsClick={handleDetailsClick} />
 
-      <Details films={films} current={current} />
+      <Details films={current} />
     </div>
   );
 }

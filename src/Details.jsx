@@ -1,4 +1,4 @@
-export default function Details({films, current }) {
+export default function Details({films }) {
   const filmInfo = (
     <div className="film-detail is-hydrated">
       <figure className="film-backdrop">
@@ -33,12 +33,15 @@ export default function Details({films, current }) {
   );
 
   let details = films.id ? filmInfo : emptyInfo;
+  console.log("DETAILS", films)
 
   return (
+    <>
     <div className="film-details">
       <h1 className="section-title">DETAILS</h1>
       {details}
     </div>
+    </>
   );
 }
 

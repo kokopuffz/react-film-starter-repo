@@ -2,7 +2,7 @@
 import Poster from "./Poster";
 import Fave from "./Fave";
 
-export default function FilmRow({ films, key, onFaveToggle, isFave, handleDetailsClick }) {
+export default function FilmRow({ films, onFaveToggle, isFave, handleDetailsClick }) {
   // const handleDetailsClick = (film) => {
   //   console.log(`fetching details for ${film}`);
   // };
@@ -14,7 +14,7 @@ export default function FilmRow({ films, key, onFaveToggle, isFave, handleDetail
   return (
     <div
       className="film-row"
-      onClick={() => handleDetailsClick(films.title)}
+      onClick={() => handleDetailsClick(films)}
     >
       <Poster alt={films.title} url={posterUrl} />
       <Fave onFaveToggle={() => {onFaveToggle(films)}} isFave={isFave} />

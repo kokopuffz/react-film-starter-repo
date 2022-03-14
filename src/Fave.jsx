@@ -1,7 +1,7 @@
 export default function Fave({ onFaveToggle, isFave}) {
   const handleClick = (e) => {
     e.stopPropagation();
-    console.log("Handling Fave click!");
+    // console.log("Handling Fave click!");
     onFaveToggle();
   };
 
@@ -10,7 +10,7 @@ export default function Fave({ onFaveToggle, isFave}) {
     <>
       <div
         className={`film-row-fave ${action}`}
-        onClick={() => this.handleClick("faves")}
+        onClick={handleClick}
       >
         <p className="material-icons">add_to_queue</p>
       </div>
