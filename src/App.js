@@ -35,7 +35,7 @@ export default function App() {
       .then(response =>{
         setFilms(response.data.results)
       })
-  }, [])
+  }, [popularFilmsUrl])
 
   return (
     <div className="film-library">
